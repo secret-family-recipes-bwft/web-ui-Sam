@@ -195,7 +195,37 @@ footer img{
         border-radius: 0px 0px 10px 10px;
     }
 
+    .hero-article a{
+        width: 200px;
+        text-align: center;
+        padding: 1em;
+    }
+
     footer img{
         margin-top: 5%;
+    }
+}
+
+@media (max-width: 400px){
+    /* move app image above text in hero-article */
+    /* move small-article to one per row */
+
+    .hero-article{
+        flex-direction: column;
+    }
+
+    .hero-article img{
+        height: 60vw;
+        width: 60vw;
+        margin-bottom: 5%;
+    }
+
+    .small-article{
+        width: 100%;
+    }
+
+    .small-article img{
+        height: 20vw;
+        width: 20vw;
     }
 }
