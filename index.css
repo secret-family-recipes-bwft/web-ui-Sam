@@ -20,6 +20,7 @@ html{
 body{
     font-size: 1.6rem;
     line-height: 1.15;
+    /* TODO: insert background image and check sizing, scaling, repeat mode etc. */
 }
 
 /* content container */
@@ -95,7 +96,6 @@ main{
     width: 100%;
     border-bottom: 2px solid #5353ff;
     padding: 5%;
-    margin: 0% 0% 5%;
     display:flex;
     align-items: center;
 }
@@ -122,7 +122,6 @@ main{
     width: 50%;
     border-bottom: 2px solid #5353ff;
     padding: 5%;
-    margin: 0% 0% 5%;
     display:flex;
     align-items: center;
 }
@@ -135,6 +134,7 @@ main{
 /* footer styles */
 
 footer{
+    margin-top: 2.5%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -142,7 +142,7 @@ footer{
 }
 
 footer img{
-    margin-top: 2%;
+    margin-top: 2.5%;
     height: 10vw;
     width: 100%;
 }
@@ -175,6 +175,7 @@ footer img{
     nav{
         flex-direction: column;
         align-items: center;
+        margin: 2.5%;
     }
 
     nav a{
@@ -202,7 +203,29 @@ footer img{
     }
 
     footer img{
-        margin-top: 5%;
+        margin-top: 2.5%;
+    }
+
+    .hero-article img{
+        height: 30vw;
+        width: 30vw;
+    }
+
+    .small-article{
+        flex-direction: column;
+    }
+
+    .small-article .article-box{
+        margin: 0;
+    }
+
+    .small-article img{
+        height: 20vw;
+        width: 20vw;
+    }
+
+    .small-article img{
+        margin-bottom: 5%;
     }
 }
 
@@ -214,6 +237,10 @@ footer img{
         flex-direction: column;
     }
 
+    .hero-article .article-box{
+        margin: 0;
+    }
+
     .hero-article img{
         height: 60vw;
         width: 60vw;
@@ -222,10 +249,24 @@ footer img{
 
     .small-article{
         width: 100%;
+        flex-direction: row;
+    }
+
+    .small-article .article-box{
+        margin: 5%;
     }
 
     .small-article img{
-        height: 20vw;
-        width: 20vw;
+        margin-bottom: 0%;
+    }
+}
+
+@media (min-width: 1200px){
+    /* cap the growth of .container */
+    
+    .container{
+        margin: auto;
+        width: 90%;
+        max-width: 1400px;
     }
 }
