@@ -1,0 +1,272 @@
+/* simple reset */
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    /*font-family: "";  todo: poll people on fonts; replace with actual font family */
+}
+
+a, a:hover, a:visited, a:active{
+    text-decoration: none;
+    color: currentColor;
+}
+
+/* responsive font sizing */
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    line-height: 1.15;
+    /* TODO: insert background image and check sizing, scaling, repeat mode etc. */
+}
+
+/* content container */
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5e7a2;
+    color: #444444;
+}
+
+/* header styles */
+
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 3px solid #ff5353;
+}
+
+.nav-row{
+    padding: 2.5% 5%;
+    display: flex;
+    flex-flow: row nowrap;    
+}
+
+/* nav styles */
+
+nav{
+    display: flex;
+    align-items: center;
+}
+
+nav a{
+    border: 1px solid #5353ff;
+    border-left-width: 0px;
+    padding: 0.5em 0.75em;
+}
+
+nav a:hover{
+    color: #5353ff;
+    background-color: #444444;
+    border-color: #444444;
+}
+
+nav a:first-of-type{
+    margin-left: 2em;
+    border-left-width: 1px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+nav a:last-of-type{
+    border-radius: 0px 10px 10px 0px;
+}
+
+/* main body styles */
+
+main{
+    display: flex;
+    flex-flow: row wrap;    
+}
+
+.article-box{
+    display:flex;
+    flex-direction: column;
+    margin-left: 5%;
+    align-items: center;
+}
+
+.hero-article{
+    width: 100%;
+    border-bottom: 2px solid #5353ff;
+    padding: 5%;
+    display:flex;
+    align-items: center;
+}
+
+.hero-article img{
+    height: 20vw;
+    width: 20vw;
+}
+
+.hero-article a{
+    border: 1px solid #ff5353;
+    padding: 0.5em 0.75em;
+    margin: 5%;
+    border-radius: 10px;
+}
+
+.hero-article a:hover{
+    color: #ff5353;
+    background-color: #444444;
+    border-color: #444444;
+}
+
+.small-article{
+    width: 50%;
+    border-bottom: 2px solid #5353ff;
+    padding: 5%;
+    display:flex;
+    align-items: center;
+}
+
+.small-article img{
+    height: 10vw;
+    width: 10vw;
+}
+
+/* footer styles */
+
+footer{
+    margin-top: 2.5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer img{
+    margin-top: 2.5%;
+    height: 10vw;
+    width: 100%;
+}
+
+/* 800 px and below */
+
+@media (max-width: 800px){
+    /* items in .nav-row need to go from horizontal to vertical */
+    /* borders: thick red under h1, thin blue under header */
+    
+    .nav-row{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 2.5% 0%;
+    }
+
+    h1{
+        text-align: center;
+        width: 100%;
+        padding-bottom: 2.5%;
+        margin-bottom: 2.5%;
+        border-bottom: 3px solid #ff5353;
+    }
+
+    header{
+        border-bottom: 2px solid #5353ff;
+    }
+
+    nav{
+        flex-direction: column;
+        align-items: center;
+        margin: 2.5%;
+    }
+
+    nav a{
+        width: 200px;
+        text-align: center;
+        border-left-width: 1px;
+        border-top-width: 0px;
+        padding: 1em;
+    }
+
+    nav a:first-of-type{
+        margin-left: 0;
+        border-top-width: 1px;
+        border-radius: 10px 10px 0px 0px;
+    }
+    
+    nav a:last-of-type{
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    .hero-article a{
+        width: 200px;
+        text-align: center;
+        padding: 1em;
+    }
+
+    footer img{
+        margin-top: 2.5%;
+    }
+
+    .hero-article img{
+        height: 30vw;
+        width: 30vw;
+    }
+
+    .small-article{
+        flex-direction: column;
+    }
+
+    .small-article .article-box{
+        margin: 0;
+    }
+
+    .small-article img{
+        height: 20vw;
+        width: 20vw;
+    }
+
+    .small-article img{
+        margin-bottom: 5%;
+    }
+}
+
+@media (max-width: 400px){
+    /* move app image above text in hero-article */
+    /* move small-article to one per row */
+
+    .hero-article{
+        flex-direction: column;
+    }
+
+    .hero-article .article-box{
+        margin: 0;
+    }
+
+    .hero-article img{
+        height: 60vw;
+        width: 60vw;
+        margin-bottom: 5%;
+    }
+
+    .small-article{
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .small-article .article-box{
+        margin: 5%;
+    }
+
+    .small-article img{
+        margin-bottom: 0%;
+    }
+}
+
+@media (min-width: 1200px){
+    /* cap the growth of .container */
+    
+    .container{
+        margin: auto;
+        width: 90%;
+        max-width: 1400px;
+    }
+}
