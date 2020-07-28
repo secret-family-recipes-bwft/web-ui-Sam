@@ -1,10 +1,60 @@
+/* fonts */
+
+@font-face {
+    font-family: 'airbnb_cereal_appblack';
+    src: url('./typeface/cerealblack-webfont.woff2') format('woff2'),
+         url('./typeface/cerealblack-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'airbnb_cereal_appbold';
+    src: url('./typeface/cerealbold-webfont.woff2') format('woff2'),
+         url('./typeface/cerealbold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'airbnb_cereal_appbook';
+    src: url('./typeface/cerealbook-webfont.woff2') format('woff2'),
+         url('./typeface/cerealbook-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'airbnb_cereal_appextra_bold';
+    src: url('./typeface/cerealextrabold-webfont.woff2') format('woff2'),
+         url('./typeface/cerealextrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'airbnb_cereal_applight';
+    src: url('./typeface/cereallight-webfont.woff2') format('woff2'),
+         url('./typeface/cereallight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'airbnb_cereal_appmedium';
+    src: url('./typeface/cerealmedium-webfont.woff2') format('woff2'),
+         url('./typeface/cerealmedium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* simple reset */
 * {
     margin: 0;
     padding: 0;
     max-width: 100%;
     box-sizing: border-box;
-    /*font-family: "";  todo: poll people on fonts; replace with actual font family */
+    font-family: "airbnb_cereal_applight";  /*todo: poll people on fonts; replace with actual font family */
 }
 
 a, a:hover, a:visited, a:active{
@@ -49,6 +99,11 @@ header{
     flex-flow: row nowrap;    
 }
 
+h1{
+    font-family: "airbnb_cereal_appbold";
+    font-size: 4.0rem;
+}
+
 /* nav styles */
 
 nav{
@@ -60,12 +115,15 @@ nav a{
     border: 1px solid #5353ff;
     border-left-width: 0px;
     padding: 0.5em 0.75em;
+    transition: border-width 0.25s, padding 0.25s;
 }
 
 nav a:hover{
-    color: #5353ff;
+    /*color: #5353ff;
     background-color: #444444;
-    border-color: #444444;
+    border-color: #444444;*/
+    border-width: 0.5em 1px 0.5em 0px;
+    padding: 1px 0.75em;
 }
 
 nav a:first-of-type{
@@ -82,7 +140,7 @@ nav a:last-of-type{
 
 main{
     display: flex;
-    flex-flow: row wrap;    
+    flex-flow: row wrap;
 }
 
 .article-box{
@@ -110,12 +168,15 @@ main{
     padding: 0.5em 0.75em;
     margin: 5%;
     border-radius: 10px;
+    transition: border-width 0.25s, padding 0.25s;
 }
 
 .hero-article a:hover{
-    color: #ff5353;
+    /*color: #ff5353;
     background-color: #444444;
-    border-color: #444444;
+    border-color: #444444;*/
+    border-width: 1px 0.75em;
+    padding: 0.5em 1px;
 }
 
 .small-article{
@@ -129,6 +190,11 @@ main{
 .small-article img{
     height: 10vw;
     width: 10vw;
+}
+
+h2{
+    font-family: "airbnb_cereal_appbook";
+    font-size: 2.4rem;
 }
 
 /* footer styles */
