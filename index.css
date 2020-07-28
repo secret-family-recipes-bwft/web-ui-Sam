@@ -54,7 +54,7 @@
     padding: 0;
     max-width: 100%;
     box-sizing: border-box;
-    font-family: "airbnb_cereal_applight";  /*todo: poll people on fonts; replace with actual font family */
+    font-family: "airbnb_cereal_applight";
 }
 
 a, a:hover, a:visited, a:active{
@@ -112,23 +112,19 @@ nav{
 }
 
 nav a{
-    border: 1px solid #5353ff;
-    border-left-width: 0px;
+    border: 0.2em solid #5353ff;
+    border-left-width: 0;
     padding: 0.5em 0.75em;
-    transition: border-width 0.25s, padding 0.25s;
 }
 
 nav a:hover{
-    /*color: #5353ff;
-    background-color: #444444;
-    border-color: #444444;*/
-    border-width: 0.5em 1px 0.5em 0px;
-    padding: 1px 0.75em;
+    color: #5353ff;
+    background: #faf3d0;
 }
 
 nav a:first-of-type{
     margin-left: 2em;
-    border-left-width: 1px;
+    border-left-width: 0.2em;
     border-radius: 10px 0px 0px 10px;
 }
 
@@ -164,19 +160,17 @@ main{
 }
 
 .hero-article a{
-    border: 1px solid #ff5353;
+    border: 0.2em solid #ff5353;
     padding: 0.5em 0.75em;
     margin: 5%;
     border-radius: 10px;
-    transition: border-width 0.25s, padding 0.25s;
 }
 
 .hero-article a:hover{
-    /*color: #ff5353;
-    background-color: #444444;
-    border-color: #444444;*/
-    border-width: 1px 0.75em;
-    padding: 0.5em 1px;
+    color: #ff5353;
+    border-width: 0.3em;
+    padding: 0.4em 0.7em;
+    background: #faf3d0;
 }
 
 .small-article{
@@ -227,7 +221,6 @@ footer img{
     }
 
     h1{
-        text-align: center;
         width: 100%;
         padding-bottom: 2.5%;
         margin-bottom: 2.5%;
@@ -242,19 +235,21 @@ footer img{
         flex-direction: column;
         align-items: center;
         margin: 2.5%;
+        color: #5353ff;
     }
 
     nav a{
         width: 200px;
         text-align: center;
-        border-left-width: 1px;
-        border-top-width: 0px;
+        border-left-width: 0.2em;
+        border-top-width: 0;
         padding: 1em;
+        background-color: #faf3d0;
     }
 
     nav a:first-of-type{
         margin-left: 0;
-        border-top-width: 1px;
+        border-top-width: 0.2em;
         border-radius: 10px 10px 0px 0px;
     }
     
@@ -266,6 +261,8 @@ footer img{
         width: 200px;
         text-align: center;
         padding: 1em;
+        color: #ff5353;
+        background: #faf3d0;
     }
 
     footer img{
