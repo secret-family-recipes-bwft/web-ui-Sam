@@ -194,11 +194,13 @@ main{
     padding: 5%;
     display:flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .small-article img{
     height: 10vw;
     width: 10vw;
+    flex-shrink: 0;
 }
 
 h2{
