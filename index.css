@@ -70,6 +70,8 @@ html{
 body{
     font-size: 1.6rem;
     line-height: 1.15;
+    background: url("assets/sydney-rae-BapCHLuLe9Q-unsplash.jpg") no-repeat center fixed;
+    background-size: cover;
     /* TODO: insert background image and check sizing, scaling, repeat mode etc. */
 }
 
@@ -99,6 +101,7 @@ header{
 header img{
     width: 100%;
     max-height: 6em;
+    object-fit: cover;
 }
 
 .nav-row{
@@ -167,6 +170,8 @@ main{
 .hero-article img{
     height: 20vw;
     width: 20vw;
+    flex-shrink: 0;
+    object-fit: cover;
 }
 
 .hero-article a{
@@ -219,6 +224,7 @@ footer img{
     margin-top: 2.5%;
     width: 100%;
     max-height: 6em;
+    object-fit: cover;
 }
 
 /* 800 px and below */
@@ -291,6 +297,8 @@ footer img{
     .hero-article img{
         height: 30vw;
         width: 30vw;
+        min-height: 200px;
+        min-width: 200px;
     }
 
     .small-article{
@@ -354,5 +362,12 @@ footer img{
         margin: auto;
         width: 90%;
         max-width: 1400px;
+    }
+
+    .hero-article img{
+        height: 240px;
+        width: 20vw;
+        flex-shrink: 0;
+        object-fit: cover;
     }
 }
