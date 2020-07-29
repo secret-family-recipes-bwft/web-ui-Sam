@@ -210,6 +210,23 @@ h2{
     text-align: center;
 }
 
+.minor-article{
+    width: 100%;
+    border-bottom: 2px solid #5353ff;
+    padding: 5%;
+    display:flex;
+    align-items: center;
+    text-align: center;
+}
+
+.minor-article a{
+    font-family: "airbnb_cereal_appmedium";
+}
+
+.minor-article a:hover{
+    color: #ff5353;
+}
+
 /* footer styles */
 
 footer{
