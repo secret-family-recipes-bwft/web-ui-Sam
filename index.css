@@ -201,11 +201,13 @@ main{
     height: 10vw;
     width: 10vw;
     flex-shrink: 0;
+    object-fit: cover;
 }
 
 h2{
     font-family: "airbnb_cereal_appbook";
     font-size: 2.4rem;
+    text-align: center;
 }
 
 /* footer styles */
